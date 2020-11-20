@@ -13,7 +13,7 @@ namespace WordFrequency
                 return inputStr + " 1";
             }
 
-            var inputList = SplitInputList(inputStr);
+            var inputList = SplitInputToList(inputStr);
 
             //get the map for the next step of sizing the same word
             var map = GetListMap(inputList);
@@ -41,7 +41,7 @@ namespace WordFrequency
             return string.Join("\n", strList.ToArray());
         }
 
-        private static List<Input> SplitInputList(string inputStr)
+        private static List<Input> SplitInputToList(string inputStr)
         {
             //split the input string with 1 to n pieces of spaces
             string[] arr = Regex.Split(inputStr, @"\s+");
