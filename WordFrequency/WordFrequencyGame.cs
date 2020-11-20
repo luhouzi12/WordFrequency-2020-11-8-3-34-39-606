@@ -44,7 +44,8 @@ namespace WordFrequency
         private static List<Input> SplitInputToList(string inputStr)
         {
             //split the input string with 1 to n pieces of spaces
-            string[] arr = Regex.Split(inputStr, @"\s+");
+            string anySpace = @"\s+";
+            string[] arr = Regex.Split(inputStr, anySpace);
 
             List<Input> inputList = new List<Input>();
             foreach (var s in arr)
