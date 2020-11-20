@@ -48,9 +48,9 @@ namespace WordFrequency
             string[] arr = Regex.Split(inputStr, anySpace);
 
             List<Input> inputList = new List<Input>();
-            foreach (var s in arr)
+            foreach (var splitString in arr)
             {
-                Input input = new Input(s, 1);
+                Input input = new Input(splitString, 1);
                 inputList.Add(input);
             }
 
