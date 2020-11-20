@@ -31,7 +31,6 @@ namespace WordFrequency
 
             List<string> strList = new List<string>();
 
-            //stringJoiner joiner = new stringJoiner("\n");
             foreach (Input w in inputList)
             {
                 string s = w.Value + " " + w.WordCount;
@@ -62,7 +61,6 @@ namespace WordFrequency
             Dictionary<string, List<Input>> map = new Dictionary<string, List<Input>>();
             foreach (var input in inputList)
             {
-                //       map.computeIfAbsent(input.getValue(), k -> new ArrayList<>()).add(input);
                 if (!map.ContainsKey(input.Value))
                 {
                     List<Input> arr = new List<Input>();
