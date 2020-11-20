@@ -8,7 +8,8 @@ namespace WordFrequency
     {
         public string GetResult(string inputStr)
         {
-            if (Regex.Split(inputStr, @"\s+").Length == 1)
+            const string SpacePattern = @"\s+";
+            if (Regex.Split(inputStr, SpacePattern).Length == 1)
             {
                 return inputStr + " 1";
             }
@@ -43,8 +44,8 @@ namespace WordFrequency
         private static List<Input> SplitInputToList(string inputStr)
         {
             //split the input string with 1 to n pieces of spaces
-            string anySpace = @"\s+";
-            string[] arr = Regex.Split(inputStr, anySpace);
+            string spacePattern = @"\s+";
+            string[] arr = Regex.Split(inputStr, spacePattern);
 
             List<Input> inputList = new List<Input>();
             foreach (var splitString in arr)
